@@ -181,15 +181,15 @@ console.log(aaa);
 // Reason : In JavaScript, the boolean value `true` is coerced to the number `1` when used in an arithmetic operation. Therefore, when you apply the increment operator `++` to `aaa`, it first converts `true` to `1`, then increments it to `2`. Hence, the output of `console.log(aaa)` is `2`.
 
 
-let bbb = 12++;
-console.log(bbb);
+// let bbb = 12++;
+// console.log(bbb);
 // Output: SyntaxError: Invalid left-hand side expression in postfix operation
 // Reason : The expression `12++` is invalid because the increment operator `++` can only be applied to variables, not to literals. In this case, `12` is a numeric literal, and you cannot increment a literal value. Therefore, this code will throw a syntax error indicating that the left-hand side expression in the postfix operation is invalid.
 
 
 let ccc = 12;
-let ddd = ++(a++);
-console.log(ddd);
+// let ddd = ++(a++);
+// console.log(ddd);
 // Output: SyntaxError: Invalid left-hand side expression in prefix operation
 // Reason : The expression `++(a++)` is invalid because the increment operator `++` cannot be applied to the result of another increment operation. In this case, `a++` is a post-increment operation that returns the current value of `a` before incrementing it, and you cannot apply the pre-increment operator `++` to the result of a post-increment operation. Therefore, this code will throw a syntax error indicating that the left-hand side expression in the prefix operation is invalid.
 
@@ -223,8 +223,14 @@ console.log("Area of the triangle is: " + area);
 
 
 
-
-
-
+// let age = Number(prompt("Enter your age:"));
+// if((isNaN(age))){
+//     console.log("Please enter a valid number for age.");
+// }
+// else if(age >=18){
+//     console.log("You are an adult")
+// }else{
+//     console.log("You are a minor")
+// }
 
 
