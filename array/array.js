@@ -129,3 +129,89 @@ for(let i = 0;i<arr.length;i++){
 }
 
 console.log(arr,'arr');
+
+
+// 15. Sort an array in descending order
+let array6 = [5,3,1,4,2];
+
+//method 1
+array6.sort((a,b) => b-a);
+console.log(array6,'sorted array in descending order');
+
+//using for loop
+const arr1 = [23,43,56,10,5,7];
+for(let i = 0;i<arr1.length;i++){
+    for(let j=0;j<arr1.length-1;j++){
+        if(arr1[j]<arr1[j+1]){
+            let temp = arr1[j];
+            arr1[j] = arr1[j+1];
+            arr1[j+1] = temp;
+        }
+    }
+}
+
+console.log(arr1,'arr in descending order');
+
+// 16. find the sum of all elements in an array
+let array7 = [1,2,3,4,5];
+let sum = 0;
+for(let i=0;i<array7.length;i++){
+    sum += array7[i];
+}
+console.log(sum,'sum of all elements in array');
+
+
+// 17. Count occurrence of a number.
+let array8 = [1,2,3,4,5,2,3,2];
+let numberToCount = 2;
+let count = 0;
+for(let i=0;i<array8.length;i++){
+    if(array8[i] === numberToCount){
+        count++;
+    }
+}
+console.log(`Number ${numberToCount} occurs ${count} times in array`);
+
+
+// 18 count all elements in array
+let array9 = [1,2,3,4,5,2,3,2];
+let elementCount = {};
+for(let i=0;i<array9.length;i++){
+    let element = array9[i];
+    if(elementCount[element]){
+        elementCount[element]++;
+    }else{
+        elementCount[element] = 1;
+    }
+}
+console.log(elementCount,'count of all elements in array');
+
+
+//19. find the second largest element in an array
+let array10 = [1,2,3,4,5];
+let largest = -Infinity;
+let secondLargest = -Infinity;
+for(let i=0;i<array10.length;i++){
+    if(array10[i]>largest){
+        secondLargest = largest;
+        largest = array10[i];
+    }else if(array10[i]>secondLargest && array10[i] !== largest){
+        secondLargest = array10[i];
+    }
+}
+console.log(secondLargest,'second largest element in array');
+
+// 20. find the second smallest element in an array
+let array11 = [1,2,3,4,5];
+let smallest = Infinity;
+let secondSmallest = Infinity;
+for(let i=0;i<array11.length;i++){
+    if(array11[i]<smallest){
+        secondSmallest = smallest;
+        smallest = array11[i];
+    }else if(array11[i]<secondSmallest && array11[i] !== smallest){
+        secondSmallest = array11[i];
+    }
+}
+console.log(secondSmallest,'second smallest element in array');
+
